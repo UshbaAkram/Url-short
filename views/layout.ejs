@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/styles.css" rel="stylesheet">
+  <title><%= title %></title>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <nav class="bg-blue-600 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="/" class="text-white font-bold text-xl">URL Shortener</a>
+      <div>
+        <a href="/" class="text-white mr-4">Home</a>
+        <a href="/analytics" class="text-white">Analytics</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container mx-auto mt-6">
+    <%= body %>
+  </main>
+</body>
+</html>

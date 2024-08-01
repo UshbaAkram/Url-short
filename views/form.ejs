@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShortId - Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    nav{
+        background-color: #344e41;
+    }
+    .tr{
+        background-color: #3a5a40;
+    }
+    .title{
+        color: #3a5a40;
+    }
+    body{
+        background-color: #dad7cd;
+    }
+    button{
+        background-color: #0d2818;
+    }
+    button:hover {
+      background-color: rgb(4, 71, 28);
+    }
+    .box{
+        /* background-color: #04471c; */
+        /* box-shadow:  rgba(0, 0, 255, 0.5) 1px 10px 20px, rgba(0, 0, 255, 0.2) 0px 0px 0px 5px */
+        box-shadow: rgba(13, 20, 13, 0.1) 0 -25px 18px -14px inset,
+    rgba(4, 71, 28, 0.15) 0 1px 2px, rgba(0, 18, 234, 0.15) 0 2px 4px,
+    rgba(4, 71, 28, 0.15) 0 4px 8px, rgba(0, 18, 234, 0.15) 0 8px 16px,
+    rgba(4, 71, 28, 0.15) 0 16px 32px;
+
+    }
+  </style>
+</head>
+<body class=" min-h-screen">
+  <nav class=" p-4 shadow-md">
+    <div class="container mx-auto">
+      <a href="/" class="text-white font-bold text-lg mr-4">Home</a>
+      <a href="/analytics" class="text-white font-bold text-lg">Analytics</a>
+    </div>
+  </nav>
+  
+  <div class=" mt-12 flex items-center justify-center">
+    <div class="box  p-8 rounded shadow-md w-full max-w-lg mx-auto fade-in">
+      <h1 class="text-4xl font-bold mb-8 text-center title">ShortId URL Generator</h1>
+      <% if (locals.id) { %>
+        <p class="mb-4 text-center">Generated URL: <a href="http://localhost:8000/url/<%= id %>" class="text-blue-500 underline">http://localhost:8000/url/<%= id %></a></p>
+      <% } %>
+      <form method="POST" action="/">
+        <label class="block mb-2 text-lg">Enter Original URL</label>
+        <input type="text" name="url" placeholder="https://www.example.com" class="border p-2 w-full mb-4">
+        <button type="submit" class="w-full text-white p-2 rounded">Generate</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
