@@ -7,8 +7,6 @@ This is a URL Shortener web application built with Node.js, Express, MongoDB, an
 - [Usage](#usage)
 - [Features](#features)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
